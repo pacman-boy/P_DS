@@ -35,4 +35,8 @@ public class Universe {
       }
     } catch (FileNotFoundException e) { e.printStackTrace(); }
   }
+
+  public double getRadius() {
+    return radius;
+  }
 }
