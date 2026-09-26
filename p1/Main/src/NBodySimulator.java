@@ -15,10 +15,23 @@ public class NBodySimulator {
   }
 
   public void simulate() {
-
+    createCanvas();
+    // StdDraw.enableDoubleBuffering();
+    while (true) {
+      StdDraw.clear();
+      universe.update(timeStep); // update bodies
+      drawUniverse(); // tell each body to draw itself
+      StdDraw.show();
+      StdDraw.pause(pauseTime);
+    }
   }
 
   private void drawUniverse(){
+    int num = universe.getNumBodies();
+    for (int i = 0; i < num; i++) {
+      Vector position = universe.getBodyPosition(i);
+      StdDraw.point(position.cartesian(0),position.cartesian(1));
+    }
   }
 
   public NBodySimulator(Universe universe, double dt, int pt, boolean doTrace) {
