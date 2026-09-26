@@ -12,15 +12,27 @@ public class NBodySimulator {
 // read from txt file, second line
     StdDraw.setXscale(-radius, +radius);
     StdDraw.setYscale(-radius, +radius);
+
+    if (trace) {
+      StdDraw.clear(StdDraw.GRAY);
+    }
   }
 
   public void simulate() {
     createCanvas();
-    // StdDraw.enableDoubleBuffering();
     while (true) {
-      StdDraw.clear();
-      universe.update(timeStep); // update bodies
-      drawUniverse(); // tell each body to draw itself
+      if (trace){
+        StdDraw.setPenColor(StdDraw.WHITE);
+        drawUniverse();
+        universe.update(timeStep);
+        StdDraw.setPenColor(StdDraw.BLACK);
+        drawUniverse();
+      } else {
+        StdDraw.clear();
+        universe.update(timeStep); // update bodies
+        drawUniverse(); // tell each body to draw itself
+
+      }
       StdDraw.show();
       StdDraw.pause(pauseTime);
     }

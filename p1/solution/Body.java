@@ -12,11 +12,20 @@ public class Body {
     private Vector position;           // position
     private Vector velocity;           // velocity
     private final double mass;  // mass
+    private double G;
+
+    public Body(Vector position, Vector velocity, double mass, double Gravity) {
+        this.position = position;
+        this.velocity = velocity;
+        this.mass = mass;
+        G = Gravity;
+    }
 
     public Body(Vector position, Vector velocity, double mass) {
         this.position = position;
         this.velocity = velocity;
         this.mass = mass;
+        G = 6.67e-11;
     }
 
     public Vector getPosition() {
@@ -31,7 +40,7 @@ public class Body {
 
     public Vector forceFrom(Body b) {
         Body a = this;
-        double G = 6.67e-11;
+        // double G = 6.67e-11; Ja no fa falta
         Vector delta = b.position.minus(a.position);
         double dist = delta.magnitude();
         double magnitude = (G * a.mass * b.mass) / (dist * dist);

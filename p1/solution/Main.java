@@ -5,7 +5,7 @@ public static void main(String[] args) {
   int pauseTime = Integer.parseInt(args[1]);
   boolean trace = args[2].toLowerCase().equals("trace");
   String fname = args[3];
-  Universe universe = new Universe(fname);
+  Universe universe = UniverseFactory.fromFile(fname);
   NBodySimulator simulator = new NBodySimulator(universe, dt, pauseTime, trace);
   simulator.simulate();
 }
