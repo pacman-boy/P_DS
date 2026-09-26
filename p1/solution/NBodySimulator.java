@@ -29,9 +29,8 @@ public class NBodySimulator {
         drawUniverse();
       } else {
         StdDraw.clear();
-        universe.update(timeStep); // update bodies
-        drawUniverse(); // tell each body to draw itself
-
+        universe.update(timeStep);
+        drawUniverse();
       }
       StdDraw.show();
       StdDraw.pause(pauseTime);
