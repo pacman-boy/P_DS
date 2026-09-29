@@ -1,0 +1,25 @@
+i)
+- Alta cohesió: Cada clase te un únic rol concret, per exemple UniverseFactory, el qual s'encarrega de crear el univers segons els fitxer.
+- (Don't Repeat Yourself): Evitant repetir codic en diferents parts del codic, a mes que en cas de voler modificar o afeigir alguna funcionalitat, sigui molt més simple i ràpid.
+- Information hiding: Per evitar problemes futurs i mantenir una major seguretat, tenir els atributs de manera privada i creant setters i getters per modificar els seus valors.
+
+ii)
+
+1.
+   - + : Implementació inmediata ja que no hem de afeigir classes adicionales al projecte.
+   - - : No segeix el principi SRP i té molt menys cohesió ja que Universe estaria fent moltes coses a la vegada.
+
+2.
+   - + : Permet afeigir noves animacions sense tenir que cambiar el codi base
+   - - : Realment no es necessari crear aquesta herencia ja que al final totes les animacions utilitzen els mateixos atributs per fer la simulació
+
+3.
+   - + : Màxima cohesió i cumpleix el principi SRP, on cada classe té una funcionalitat clara i permet afeigir funcionalitats sense tenir que modificar tot el codi base.
+   - - : Crear una classe nova.
+
+En conclusió, la millor opció seria la 3ra, ja que seguiex tots els principis i bones pràcticas de programació orientada a objectes explicades a classe, a mes que per la part 2 serà més fàcil i cómode per afeigir noves funcionalitats
+
+iii)
+
+Ho he fet mitjançant la classe UniverseFactory, la qual té mètodes per crear cada una de les animacions que s'especifiquen en aquesta primera part.
+Aquesta imlementació permet compartir atributs comuns que s'utilitzen en les diferents animacions, a més de tenir la possibilitat de afegir noves sense alterar altres parts del codi.

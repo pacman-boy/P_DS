@@ -1,0 +1,71 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Body {
+- position : Vector
+- velocity : Vector
+- mass : double
+- G : double
++ Body(position : Vector, velocity : Vector, mass : double)
++ Body(position : Vector, velocity : Vector, mass : double, G : double)
++ getPosition() : Vector
++ move(f : Vector, dt : double)
++ forceFrom(b : Body) : Vector
++ toString() : String
+}
+
+class Universe {
+- numBodies : int
+- radius : double
++ Universe(bodies : Body[], radius : double)
++ update(dt : double)
++ getRadius() : double
++ getBodyPosition(i : int) : Vector
++ getNumBodies() : int
+}
+
+class UniverseFactory {
++ {static} fromFile(fname : String) : Universe
++ {static} centralConfiguration(numBodies : int, angleVelPos : double) : Universe
++ {static} planetaryConfiguration(numPlanets : int) : Universe
++ {static} choreographies(nchoreography : int) : Universe
++ {static} randomBetween(n1 : double, n2 : double) : double
+}
+
+class NBodySimulator {
+- timeStep : double
+- pauseTime : int
+- trace : boolean
++ NBodySimulator(universe : Universe, dt : double, pt : int, doTrace : boolean)
+- createCanvas()
++ simulate()
+- drawUniverse()
+}
+
+class Main {
++ {static} main(args : String[])
+}
+
+Universe *-> "1..*" Body : bodies
+NBodySimulator o-> Universe : universe
+
+note right of NBodySimulator
+while (true) {
+    if (trace) {
+        StdDraw.setPenColor(StdDraw.WHITE);
+        drawUniverse();
+        universe.update(timeStep);
+        StdDraw.setPenColor(StdDraw.BLACK);
+        drawUniverse();
+    } else {
+        StdDraw.clear();
+        universe.update(timeStep);
+        drawUniverse();
+    }
+    StdDraw.show();
+    StdDraw.pause(pauseTime);
+}
+end note
+
+@enduml
