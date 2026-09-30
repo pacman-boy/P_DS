@@ -1,12 +1,12 @@
 i)
 - Alta cohesió: Cada clase te un únic rol concret, per exemple UniverseFactory, el qual s'encarrega de crear el univers segons els fitxer.
-- (Don't Repeat Yourself): Evitant repetir codic en diferents parts del codic, a mes que en cas de voler modificar o afeigir alguna funcionalitat, sigui molt més simple i ràpid.
+- (Don't Repeat Yourself): Evitant repetir codi en diferents parts del codi, a mes que en cas de voler modificar o afegir alguna funcionalitat, sigui molt més simple i ràpid.
 - Information hiding: Per evitar problemes futurs i mantenir una major seguretat, tenir els atributs de manera privada i creant setters i getters per modificar els seus valors.
 
 ii)
 
 1.
-   - + : Implementació inmediata ja que no hem de afeigir classes adicionales al projecte.
+   - + : Implementació inmediata ja que no hem de afeigir classes adicionals al projecte.
    - - : No segeix el principi SRP i té molt menys cohesió ja que Universe estaria fent moltes coses a la vegada.
 
 2.
@@ -17,7 +17,7 @@ ii)
    - + : Màxima cohesió i cumpleix el principi SRP, on cada classe té una funcionalitat clara i permet afeigir funcionalitats sense tenir que modificar tot el codi base.
    - - : Crear una classe nova.
 
-En conclusió, la millor opció seria la 3ra, ja que seguiex tots els principis i bones pràcticas de programació orientada a objectes explicades a classe, a mes que per la part 2 serà més fàcil i cómode per afeigir noves funcionalitats
+En conclusió, la millor opció és la 3ra, ja que seguiex tots els principis i bones pràcticas de programació orientada a objectes explicades a classe, a més que per la part 2 serà més fàcil i cómode per afeigir noves funcionalitats
 
 iii)
 
