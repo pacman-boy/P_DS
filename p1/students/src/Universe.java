@@ -6,7 +6,7 @@ import java.util.Scanner;
 /******************************************************************************
  *  Compilation:  javac Universe.java
  *  Execution:    java Universe dt input.txt
- *  Dependencies: Body.java Vector.java StdIn.java StdDraw.java
+ *  Dependencies: Body.java util.Vector.java StdIn.java util.StdDraw.java
  *  Datafiles:    http://www.cs.princeton.edu/introcs/34nbody/2body.txt
  *                http://www.cs.princeton.edu/introcs/34nbody/3body.txt
  *                http://www.cs.princeton.edu/introcs/34nbody/4body.txt

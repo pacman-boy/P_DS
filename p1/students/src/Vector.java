@@ -1,16 +1,16 @@
 /******************************************************************************
- *  Compilation:  javac Vector.java
- *  Execution:    java Vector
+ *  Compilation:  javac util.Vector.java
+ *  Execution:    java util.Vector
  *
  *  Implementation of a vector of real numbers.
  *
  *  This class is implemented to be immutable: once the client program
- *  initialize a Vector, it cannot change any of its fields
+ *  initialize a util.Vector, it cannot change any of its fields
  *  (N or data[i]) either directly or indirectly. Immutability is a
  *  very desirable feature of a data type.
  *
  *
- *  % java Vector
+ *  % java util.Vector
  *  x        =  (1.0, 2.0, 3.0, 4.0)
  *  y        =  (5.0, 2.0, 4.0, 1.0)
  *  x + y    =  (6.0, 4.0, 7.0, 5.0)
@@ -19,7 +19,7 @@
  *  <x, y>   =  25.0
  *  |x - y|  =  5.0990195135927845
  *
- *  Note that java.util.Vector is an unrelated Java library class.
+ *  Note that java.util.util.Vector is an unrelated Java library class.
  *
  ******************************************************************************/
 
@@ -47,10 +47,10 @@ public class Vector {
     // create a vector from either an array or a vararg list
     // this constructor uses Java's vararg syntax to support
     // a constructor that takes a variable number of arguments, such as
-    // Vector x = new Vector(1.0, 2.0, 3.0, 4.0);
-    // Vector y = new Vector(5.0, 2.0, 4.0, 1.0);
+    // util.Vector x = new util.Vector(1.0, 2.0, 3.0, 4.0);
+    // util.Vector y = new util.Vector(5.0, 2.0, 4.0, 1.0);
 /*
-    public Vector(double... data) {
+    public util.Vector(double... data) {
         n = data.length;
 
         // defensive copy so that client can't alter our copy of data[]
@@ -64,7 +64,7 @@ public class Vector {
         return n;
     }
 
-    // return the inner product of this Vector a and b
+    // return the inner product of this util.Vector a and b
     public double dot(Vector that) {
         if (this.length() != that.length())
             throw new IllegalArgumentException("dimensions disagree");
@@ -74,7 +74,7 @@ public class Vector {
         return sum;
     }
 
-    // return the Euclidean norm of this Vector
+    // return the Euclidean norm of this util.Vector
     public double magnitude() {
         return Math.sqrt(this.dot(this));
     }

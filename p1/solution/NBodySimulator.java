@@ -5,7 +5,7 @@ public class NBodySimulator {
   private boolean trace;
 
   private void createCanvas() {
-//StdDraw.setCanvasSize(700, 700); // uncomment for a larger window
+//util.StdDraw.setCanvasSize(700, 700); // uncomment for a larger window
     StdDraw.enableDoubleBuffering();
     StdDraw.setPenRadius(0.025);
     double radius = universe.getRadius();
