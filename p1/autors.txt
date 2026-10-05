@@ -1,1 +1,3 @@
-Blay Clotas Cekov 1709719 (Tot)
+Adrià Morales Cuñat 1702336: He fet la part de refactoritzar el codi, he seguit les passes i he implementat els nous mètodes i refactoritzat les classes pel seu funcionament. També he col·laborat amb les respostes del respota.txt
+
+Blay Clotas Cekov 1709719: He col·laborat amb la refactorització del projecte inicial, també m'he encarregat de modificar el diagrama UML amb els canvis realitzats en la estructura, mètodes i atribits del codi. També he implementat les diferentes animacions mitjançant la classe UniverseFactory. També he col·laborat amb el fitxer de resposta.txt
